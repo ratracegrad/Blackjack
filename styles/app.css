@@ -1,0 +1,28 @@
+body {
+  background-color: #009900;
+}
+h2 {
+  color: #fff;
+}
+.card {
+  float: left;
+  border: solid 1px black;
+  width: 120px;
+  border-radius: 5px;
+  height: 167px;
+  margin-right: 20px;
+}
+.covered { 
+  /*background-color: black;*/
+  background-image: url('../img/card-back.png');
+}
+.covered img{ 
+  /*background-color: black;*/
+  background-image: url('../img/card-back.png');
+  height: 167px;
+  width: 120px;
+  visibility: hidden;
+}
+.hand {
+  overflow: auto;
+}
