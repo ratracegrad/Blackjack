@@ -5,30 +5,7 @@ class window.Hand extends Backbone.Collection
 
   hit: ->
     @add(@deck.pop()).last()
-    
-
-  stand: ->
-    console.log('stand button clicked')
-    # @models[0].flip()
-    # @dealerPlays()
-    ''
   
-  dealerPlays: ->
-    console.log('dealerPlays')
-    # if dealerScore < 17 
-    console.log(@scores()[0])
-    console.log(@scores()[1])
-    # if Math.max(@scores[0],@scores[1]) < 17
-    #   console.log('must hit')
-    # else
-    #   console.log('else')
-    #while dealer must hit 
-      #@add(@deck.pop()).last()
-    #compare dealerScore to playerScore to announce winner
-    #
-    ''
-
-
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
   , 0
