@@ -26,7 +26,7 @@
         this.$el.addClass('covered');
       }
       suitLower = this.model.get('suitName').toLowerCase();
-      bgUrl = "url('img/cards/" + (this.model.get('rankName')) + "-" + suiteLower + ".png')";
+      bgUrl = "url('img/cards/" + (this.model.get('rankName')) + "-" + suitLower + ".png')";
       this.$el.css({
         'background': bgUrl
       });
