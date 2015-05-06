@@ -6,7 +6,7 @@ var app = express();
 
 app.use(express.static(path.join(__dirname)));
 
-app.use(express.static(path.join(__dirname + 'img/cards')));
+app.use(express.static(path.join(__dirname + 'img')));
 
 
 app.get('/', function (req, res) {
