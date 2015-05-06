@@ -13,10 +13,12 @@ class window.CardView extends Backbone.View
 
     bgUrl = "url('img/cards/#{@model.get('rankName')}-#{suitLower}.png')"
     @$el.css({
-      'background' : bgUrl
+      'background' : bgUrl,
+      'background-size' : '120px, 167px'
     })
 
     if not @model.get 'revealed'
       @$el.css({
-        'background' : "url('img/card-back.png')"
+        'background' : "url('img/card-back.png')",
+        'background-size' : '120px, 167px'
       })
