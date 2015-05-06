@@ -1,6 +1,6 @@
 class window.CardView extends Backbone.View
   className: 'card'
-  template: _.template '<img src="img/cards/<%= rankName %>-<%= suitName %>.png" />'
+  template: _.template '<img src="img/cards/<%= rankName %>-<%= suitName %>.png" /></div>'
 
   initialize: -> @render()
 
