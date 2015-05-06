@@ -1,0 +1,29 @@
+{
+  "name": "Blackjack",
+  "version": "1.0.0",
+  "description": "Blackjack game created using coffeeScript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ratracegrad/Blackjack.git"
+  },
+  "keywords": [
+    "jennifer",
+    "bland",
+    "blackjack",
+    "coffeeScript"
+  ],
+  "author": "Jennifer Bland",
+  "license": "Copyright 2015, Jennifer Bland. All rights reserved.",
+  "bugs": {
+    "url": "https://github.com/ratracegrad/Blackjack/issues"
+  },
+  "homepage": "https://github.com/ratracegrad/Blackjack",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
