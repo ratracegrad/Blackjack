@@ -7,7 +7,7 @@ var app = express();
 app.use(express.static(path.join(__dirname)));
 
 app.use(express.static(path.join(__dirname + 'img')));
-app.use(express.static(path.join(__dirname + '/img/cards')));
+
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
