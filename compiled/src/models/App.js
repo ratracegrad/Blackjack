@@ -30,13 +30,13 @@
 
     App.prototype.stand = function() {
       var dScore, pScore;
+      this.get('dealerHand').models[0].flip();
       pScore = this.get('playerHand').scores()[0];
       dScore = this.get('dealerHand').scores()[0];
       console.log(dScore);
       if (pScore > 21) {
         this.playAgain('Player Busts - Can\'t Stand. Play Again?');
       } else {
-        this.get('dealerHand').models[0].flip();
         while (dScore < 17) {
           this.get('dealerHand').hit();
           dScore = this.get('dealerHand').scores()[0];

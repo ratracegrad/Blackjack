@@ -33,6 +33,14 @@
       }, 0);
     };
 
+    Hand.prototype.maxScore = function() {
+      if (this.scores()[1] <= 21) {
+        return this.scores()[1];
+      } else {
+        return this.scores()[0];
+      }
+    };
+
     Hand.prototype.scores = function() {
       return [this.minScore(), this.minScore() + 10 * this.hasAce()];
     };

@@ -13,6 +13,7 @@ class window.App extends Backbone.Model
       @playAgain('Can\'t deal because you busted! Play Again?')
 
   stand: ->
+    @get('dealerHand').models[0].flip()
     pScore = @get('playerHand').scores()[0]
     dScore = @get('dealerHand').scores()[0]
     console.log(dScore)
@@ -20,7 +21,7 @@ class window.App extends Backbone.Model
     if pScore > 21
       @playAgain('Player Busts - Can\'t Stand. Play Again?')
     else
-      @get('dealerHand').models[0].flip()
+      
       while dScore < 17
         @get('dealerHand').hit()
         dScore = @get('dealerHand').scores()[0]

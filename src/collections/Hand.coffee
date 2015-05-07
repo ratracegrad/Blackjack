@@ -14,6 +14,10 @@ class window.Hand extends Backbone.Collection
     score + if card.get 'revealed' then card.get 'value' else 0
   , 0
 
+  maxScore: ->
+    if @scores()[1] <= 21 then @scores()[1]
+    else @scores()[0]
+
   scores: ->
     # The scores are an array of potential scores.
     # Usually, that array contains one element. That is the only score.
