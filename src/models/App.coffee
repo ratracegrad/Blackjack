@@ -15,7 +15,8 @@ class window.App extends Backbone.Model
   stand: ->
     pScore = @get('playerHand').scores()[0]
     dScore = @get('dealerHand').scores()[0]
-
+    console.log(dScore)
+    
     if pScore > 21
       @playAgain('Player Busts - Can\'t Stand. Play Again?')
     else

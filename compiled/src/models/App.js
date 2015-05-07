@@ -32,6 +32,7 @@
       var dScore, pScore;
       pScore = this.get('playerHand').scores()[0];
       dScore = this.get('dealerHand').scores()[0];
+      console.log(dScore);
       if (pScore > 21) {
         this.playAgain('Player Busts - Can\'t Stand. Play Again?');
       } else {
