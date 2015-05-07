@@ -29,17 +29,20 @@
     };
 
     App.prototype.stand = function() {
-      var dScore, pScore;
+      var dScore, pScore, temp;
       this.get('dealerHand').models[0].flip();
       pScore = this.get('playerHand').scores()[0];
       dScore = this.get('dealerHand').scores()[0];
-      console.log(dScore);
+      temp = this.get('dealerHand').maxScore();
+      console.log(temp);
       if (pScore > 21) {
         this.playAgain('Player Busts - Can\'t Stand. Play Again?');
       } else {
         while (dScore < 17) {
           this.get('dealerHand').hit();
           dScore = this.get('dealerHand').scores()[0];
+          temp = this.get('dealerHand').maxScore();
+          console.log("<17 " + temp);
         }
         if (dScore > 21) {
           this.playAgain('player wins');
@@ -49,6 +52,8 @@
           while (dScore < pScore) {
             this.get('dealerHand').hit();
             dScore = this.get('dealerHand').scores()[0];
+            temp = this.get('dealerHand').maxScore();
+            console.log("less player " + temp);
           }
           if (dScore > 21) {
             this.playAgain('player wins');
