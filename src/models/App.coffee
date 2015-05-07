@@ -18,16 +18,17 @@ class window.App extends Backbone.Model
     dScore = @get('dealerHand').scores()[0]
 
     temp = @get('dealerHand').maxScore()
-    console.log(temp)
+    console.log(temp + " - " + dScore)
     
     if pScore > 21
       @playAgain('Player Busts - Can\'t Stand. Play Again?')
     else
-      
+      if dScore == 21
+        @playAgain('dealer has blackjack')
+
       while dScore < 17
         @get('dealerHand').hit()
         dScore = @get('dealerHand').scores()[0]
-
         temp = @get('dealerHand').maxScore()
         console.log("<17 " + temp)
 

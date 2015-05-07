@@ -34,10 +34,13 @@
       pScore = this.get('playerHand').scores()[0];
       dScore = this.get('dealerHand').scores()[0];
       temp = this.get('dealerHand').maxScore();
-      console.log(temp);
+      console.log(temp + " - " + dScore);
       if (pScore > 21) {
         this.playAgain('Player Busts - Can\'t Stand. Play Again?');
       } else {
+        if (dScore === 21) {
+          this.playAgain('dealer has blackjack');
+        }
         while (dScore < 17) {
           this.get('dealerHand').hit();
           dScore = this.get('dealerHand').scores()[0];
