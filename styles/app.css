@@ -21,9 +21,9 @@ h2 {
   float: left;
   border: solid 1px black;
   border-bottom: solid 2px black;
-  /*width: 120px;*/
+  width: 120px;
   border-radius: 5px;
-  /*height: 167px;*/
+  height: 167px;
   margin-right: 20px;
 }
 
@@ -38,23 +38,6 @@ h2 {
   height: 167px;
   width: 120px;
   visibility: hidden;
-}
-
-/*.hand {
-  overflow: auto;
-}*/
-
-.bank-container {
-  position: absolute;
-  top: 130px;
-  right: 40px;
-  font-size: 20px;
-  text-align: center;
-  background: rgba(255, 255, 255, .8);
-  color: #B02530;
-  border-radius: 5px;
-  padding: 5px;
-  padding-top: 0;
 }
 
 .container {
@@ -75,13 +58,6 @@ h2 {
 .dealer-hand-container {
   width: 45%;
   float: right;
-}
-
-.increase-bet, .decrease-bet {
-  display: inline;
-  font-size: 10px;
-  border-radius: 35%;
-  padding: 2px 5px;
 }
 
 .buttons .btn {

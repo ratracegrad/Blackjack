@@ -10,8 +10,9 @@ class window.CardView extends Backbone.View
     @$el.addClass 'covered' unless @model.get 'revealed'
 
     suitLower = @model.get('suitName').toLowerCase()
-
-    bgUrl = "url('img/#{@model.get('rankName')}-#{suitLower}.png')"
+    console.log(suitLower)
+    
+    bgUrl = "url('img/cards/#{@model.get('rankName')}-#{suitLower}.png')"
     @$el.css({
       'background' : bgUrl,
       'background-size' : '120px, 167px'
