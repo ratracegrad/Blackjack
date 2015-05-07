@@ -30,7 +30,7 @@ class window.App extends Backbone.Model
       while dScore < 17
         @get('dealerHand').hit()
         # dScore = @get('dealerHand').scores()[0]
-        dScore = @get('playerHand').maxScore()
+        dScore = @get('dealerHand').maxScore()
 
       if dScore > 21
         @playAgain('player wins')
@@ -40,7 +40,7 @@ class window.App extends Backbone.Model
         while dScore < pScore
           @get('dealerHand').hit()
           # dScore = @get('dealerHand').scores()[0]
-          dScore = @get('playerHand').maxScore()
+          dScore = @get('dealerHand').maxScore()
 
         if dScore > 21
           @playAgain('player wins')

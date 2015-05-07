@@ -41,7 +41,7 @@
         }
         while (dScore < 17) {
           this.get('dealerHand').hit();
-          dScore = this.get('playerHand').maxScore();
+          dScore = this.get('dealerHand').maxScore();
         }
         if (dScore > 21) {
           this.playAgain('player wins');
@@ -50,7 +50,7 @@
         } else {
           while (dScore < pScore) {
             this.get('dealerHand').hit();
-            dScore = this.get('playerHand').maxScore();
+            dScore = this.get('dealerHand').maxScore();
           }
           if (dScore > 21) {
             this.playAgain('player wins');
