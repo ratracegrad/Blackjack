@@ -3,10 +3,12 @@ class window.App extends Backbone.Model
     @newGame()
     
   hit: ->
-    pScore = @get('playerHand').scores()[0]
+    # pScore = @get('playerHand').scores()[0]
+    pScore = @get('playerHand').maxScore()
     if pScore < 21
       @get('playerHand').hit()
-      pScore = @get('playerHand').scores()[0]
+      # pScore = @get('playerHand').scores()[0]
+      pScore = @get('playerHand').maxScore()
       if pScore > 21
         @playAgain('Player Busts! Play Again?')
     else
@@ -14,11 +16,10 @@ class window.App extends Backbone.Model
 
   stand: ->
     @get('dealerHand').models[0].flip()
-    pScore = @get('playerHand').scores()[0]
-    dScore = @get('dealerHand').scores()[0]
-
-    temp = @get('dealerHand').maxScore()
-    console.log(temp + " - " + dScore)
+    # pScore = @get('playerHand').scores()[0]
+    # dScore = @get('dealerHand').scores()[0]
+    pScore = @get('playerHand').maxScore()
+    dScore = @get('dealerHand').maxScore()
     
     if pScore > 21
       @playAgain('Player Busts - Can\'t Stand. Play Again?')
@@ -28,9 +29,8 @@ class window.App extends Backbone.Model
 
       while dScore < 17
         @get('dealerHand').hit()
-        dScore = @get('dealerHand').scores()[0]
-        temp = @get('dealerHand').maxScore()
-        console.log("<17 " + temp)
+        # dScore = @get('dealerHand').scores()[0]
+        dScore = @get('playerHand').maxScore()
 
       if dScore > 21
         @playAgain('player wins')
@@ -39,10 +39,8 @@ class window.App extends Backbone.Model
       else
         while dScore < pScore
           @get('dealerHand').hit()
-          dScore = @get('dealerHand').scores()[0]
-
-          temp = @get('dealerHand').maxScore()
-          console.log("less player " + temp)
+          # dScore = @get('dealerHand').scores()[0]
+          dScore = @get('playerHand').maxScore()
 
         if dScore > 21
           @playAgain('player wins')

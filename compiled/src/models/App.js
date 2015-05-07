@@ -16,10 +16,10 @@
 
     App.prototype.hit = function() {
       var pScore;
-      pScore = this.get('playerHand').scores()[0];
+      pScore = this.get('playerHand').maxScore();
       if (pScore < 21) {
         this.get('playerHand').hit();
-        pScore = this.get('playerHand').scores()[0];
+        pScore = this.get('playerHand').maxScore();
         if (pScore > 21) {
           return this.playAgain('Player Busts! Play Again?');
         }
@@ -29,12 +29,10 @@
     };
 
     App.prototype.stand = function() {
-      var dScore, pScore, temp;
+      var dScore, pScore;
       this.get('dealerHand').models[0].flip();
-      pScore = this.get('playerHand').scores()[0];
-      dScore = this.get('dealerHand').scores()[0];
-      temp = this.get('dealerHand').maxScore();
-      console.log(temp + " - " + dScore);
+      pScore = this.get('playerHand').maxScore();
+      dScore = this.get('dealerHand').maxScore();
       if (pScore > 21) {
         this.playAgain('Player Busts - Can\'t Stand. Play Again?');
       } else {
@@ -43,9 +41,7 @@
         }
         while (dScore < 17) {
           this.get('dealerHand').hit();
-          dScore = this.get('dealerHand').scores()[0];
-          temp = this.get('dealerHand').maxScore();
-          console.log("<17 " + temp);
+          dScore = this.get('playerHand').maxScore();
         }
         if (dScore > 21) {
           this.playAgain('player wins');
@@ -54,9 +50,7 @@
         } else {
           while (dScore < pScore) {
             this.get('dealerHand').hit();
-            dScore = this.get('dealerHand').scores()[0];
-            temp = this.get('dealerHand').maxScore();
-            console.log("less player " + temp);
+            dScore = this.get('playerHand').maxScore();
           }
           if (dScore > 21) {
             this.playAgain('player wins');
