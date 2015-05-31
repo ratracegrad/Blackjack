@@ -3,7 +3,19 @@
 > Classic Blackjack game implemented using Backbone.JS, NodeJS, Express, CoffeScript and Twitter
 Bootstrap. The entire game was written in CoffeeScript.
 
-The Blackjack game is hosted on a Node Express server.
+## Technology Stack
+1. Backbone.js
+2. CoffeeScript
+3. Node.js
+4. Express
+5. Twitter Bootstrap
+
+## Requirements
+- Backbone.js
+- Express
+- CoffeeScript
+- Node.js
+- Bootstrap
 
 ## Installation
 1. Download the repository
