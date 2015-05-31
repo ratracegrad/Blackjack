@@ -1,6 +1,9 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# Blackjack
+
+> Classic Blackjack game implemented using Backbone.JS, NodeJS, Express, CoffeScript and Twitter
+Bootstrap. The entire game was written in CoffeeScript.
+
+**Table of Contents**  
 
 - [Blackjack](#blackjack)
   - [Technology Stack](#technology-stack)
@@ -9,13 +12,6 @@
   - [Operation](#operation)
   - [Live Preview](#live-preview)
   - [Screenshot](#screenshot)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Blackjack
-
-> Classic Blackjack game implemented using Backbone.JS, NodeJS, Express, CoffeScript and Twitter
-Bootstrap. The entire game was written in CoffeeScript.
 
 ## Technology Stack
 1. Backbone.js
